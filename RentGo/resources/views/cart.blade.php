@@ -48,7 +48,7 @@ use App\Products;
                                 <td>{{ $or->status }}</td>
                                 @if ($or->bukti)
                                     <td><a href="{{ asset('storage/' . $or->bukti) }}" target="_blank">Lihat Bukti</a></td>
-                                <!-- @else
+                                @else 
                                     <td><a href="" class="btn btn-primary btn-rounded mb-4" data-toggle="modal"
                                             data-target="#modalLoginForm{{ $or->id }}" data-id="{{ $or->id }}">Upload Bukti</a>
                                     </td> -->
