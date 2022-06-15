@@ -23,8 +23,8 @@ class OrderController extends Controller
             return Datatables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($data) {
-                    $button = '<a href="' . action('OrderController@update_view', $data->id) . '" type="button" name="edit" id="' . $data->id . '" class="edit btn btn-primary btn-sm">Edit</a>';
-                    $button .= '&nbsp;&nbsp;&nbsp;<a href="' . action('OrderController@delete', $data->id) . '" type="button" name="delete" id="' . $data->id . '" class="delete btn btn-danger btn-sm"' . "onclick='return confirm()'" . '>Delete</a>';
+                    // $button = '<a href="' . action('OrderController@update_view', $data->id) . '" type="button" name="edit" id="' . $data->id . '" class="edit btn btn-primary btn-sm">Edit</a>';
+                    // $button .= '&nbsp;&nbsp;&nbsp;<a href="' . action('OrderController@delete', $data->id) . '" type="button" name="delete" id="' . $data->id . '" class="delete btn btn-danger btn-sm"' . "onclick='return confirm()'" . '>Delete</a>';
                     return $button;
                 })->addColumn('name', function ($data) {
                     return User::find($data->id_user)->name;
